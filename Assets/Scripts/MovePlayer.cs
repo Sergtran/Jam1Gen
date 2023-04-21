@@ -67,6 +67,9 @@ public class MovePlayer : MonoBehaviour
         if(collision.gameObject.CompareTag("Ground")){
         isGround = true;
         }
+        if(collision.gameObject.CompareTag("reload")){
+            transform.position = new Vector3(3, 7,119);
+        }
     }
 
 }
