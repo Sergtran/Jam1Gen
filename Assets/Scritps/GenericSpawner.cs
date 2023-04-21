@@ -12,7 +12,7 @@ public class GenericSpawner<T> where T : Component
     public float initialSpawnDelay = 1;
     public float spawnRate = 3;
     public float randomFactor = 1;
-    public Collider spawnArea;
+    public Collider[]spawnArea;
     public bool fixedPosBorn;
     public Transform PosToBorn;
 
@@ -57,9 +57,10 @@ public class GenericSpawner<T> where T : Component
         var newItem = pool.GetFreeItem();
         if (!fixedPosBorn)
         {
-            var center = spawnArea.transform.position;
-            var upLimit = center + spawnArea.bounds.extents;
-            var downLimit = center - spawnArea.bounds.extents;
+            var randomArea = Random.Range(0, spawnArea.Length);
+            var center = spawnArea[randomArea].transform.position;
+            var upLimit = center + spawnArea[randomArea].bounds.extents;
+            var downLimit = center - spawnArea[randomArea].bounds.extents;
             var randomPos = center;
             randomPos.x = Random.Range(downLimit.x, upLimit.x);
             randomPos.z = Random.Range(downLimit.z, upLimit.z);

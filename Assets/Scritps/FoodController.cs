@@ -13,11 +13,13 @@ public class FoodController : MonoBehaviour
     void Start()
     {
         particleBorn.Play();
+        particleDeath.Stop();
         
     }
   
     public void Init(GenericPool<FoodController> _foodPool, Transform parent)
     {
+        transform.localScale = Vector3.one * 10;
         transform.forward = parent.transform.forward;
         foodPool = _foodPool;
         transform.SetParent(parent);
@@ -30,6 +32,8 @@ public class FoodController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        particleDeath.Play();
+        particleBorn.Stop();
         StartCoroutine(FoodDeath());
 
     }
@@ -39,10 +43,13 @@ public class FoodController : MonoBehaviour
     }
 
     IEnumerator FoodDeath()
-    {
-        
-        particleDeath.Play();
-        yield return new WaitForSeconds(0.3f);
+    {        
+        for (int i = 10; i > 0; i--)
+        {
+            gameObject.transform.localScale=(Vector3.one * i);
+            yield return new WaitForSeconds(0.05f);
+
+        }
         gameObject.SetActive(false);
         RecycleBullet();
        
