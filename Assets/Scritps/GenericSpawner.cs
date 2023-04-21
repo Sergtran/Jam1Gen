@@ -62,6 +62,7 @@ public class GenericSpawner<T> where T : Component
             var upLimit = center + spawnArea[randomArea].bounds.extents;
             var downLimit = center - spawnArea[randomArea].bounds.extents;
             var randomPos = center;
+            randomPos.y = spawnArea[randomArea].bounds.extents.y + 3;
             randomPos.x = Random.Range(downLimit.x, upLimit.x);
             randomPos.z = Random.Range(downLimit.z, upLimit.z);
             newItem.transform.position = randomPos;

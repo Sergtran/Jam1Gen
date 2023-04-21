@@ -19,7 +19,7 @@ public class FoodController : MonoBehaviour
   
     public void Init(GenericPool<FoodController> _foodPool, Transform parent)
     {
-        transform.localScale = Vector3.one * 10;
+        transform.localScale = Vector3.one * 1;
         transform.forward = parent.transform.forward;
         foodPool = _foodPool;
         transform.SetParent(parent);
@@ -30,12 +30,19 @@ public class FoodController : MonoBehaviour
 
     }
 
-    private void OnTriggerEnter(Collider other)
+    //private void OnTriggerEnter(Collider other)
+    //{
+    //    particleDeath.Play();
+    //    particleBorn.Stop();
+    //    StartCoroutine(FoodDeath());
+
+    //}
+
+    private void OnCollisionEnter(Collision collision)
     {
         particleDeath.Play();
         particleBorn.Stop();
         StartCoroutine(FoodDeath());
-
     }
     public void RecycleBullet()
     {
@@ -44,9 +51,9 @@ public class FoodController : MonoBehaviour
 
     IEnumerator FoodDeath()
     {        
-        for (int i = 10; i > 0; i--)
+        for (int i = 1; i > 0; i--)
         {
-            gameObject.transform.localScale=(Vector3.one * i);
+            //gameObject.transform.localScale=(Vector3.one * i*0.1f);
             yield return new WaitForSeconds(0.05f);
 
         }
