@@ -13,12 +13,10 @@ public class FoodSpawner : MonoBehaviour, iGenericSpawnerOwner<FoodController>
 
     public void Update()
     {
-        
         spawner.Tick();
     }
     public void OnSpawnedNewItem(FoodController newItem, GenericPool<FoodController> pool)
     {
         newItem.Init(pool, transform);
-
     }
 }
