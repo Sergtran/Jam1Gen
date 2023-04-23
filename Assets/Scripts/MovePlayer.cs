@@ -31,8 +31,8 @@ public class MovePlayer : MonoBehaviour
         forwardInput = Input.GetAxis("Vertical");
 
         // move the player
-        transform.Translate(Vector3.forward * Time.deltaTime * speed * forwardInput);
-        transform.Translate(Vector3.right * Time.deltaTime * speed * horizontalInput);
+        transform.Translate(Vector3.left * Time.deltaTime * speed * forwardInput);
+        transform.Translate(Vector3.forward * Time.deltaTime * speed * horizontalInput);
         if(Input.GetKeyDown(KeyCode.UpArrow) 
         || Input.GetKeyDown(KeyCode.DownArrow)
         || Input.GetKeyDown(KeyCode.LeftArrow)
@@ -61,7 +61,7 @@ public class MovePlayer : MonoBehaviour
 
 
         if(Input.GetKeyDown(KeyCode.R)){
-            transform.eulerAngles = newRotation;
+            transform.eulerAngles += newRotation;
         }
 
         // jump the player
@@ -82,9 +82,11 @@ public class MovePlayer : MonoBehaviour
         if(collision.gameObject.CompareTag("Ground")){
         isGround = true;
         }
+        /*
         if(collision.gameObject.CompareTag("reload")){
             transform.position = new Vector3(3, 7,119);
         }
+        */
     }
 
 }
