@@ -4,25 +4,34 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    private Rigidbody playerRb;
     private GameManager gameManager;
+    public AudioSource sonidoMordisco;
 
     // Start is called before the first frame update
     void Start()
     {
-        playerRb = this.gameObject.GetComponent<Rigidbody>();
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
     // Update is called once per frame
     void Update()
     {
-           
+
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        gameManager.UpdateScore(10);
-        gameManager.SumarTiempo();
+        if (collision.gameObject.CompareTag("Food"))
+        {
+            sonidoMordisco.Play();
+            gameManager.UpdateScore(10);
+            gameManager.SumarTiempo();
+            Destroy(collision.gameObject);
+        }
+        if(collision.gameObject.name.Equals("Ocean")){
+            GameManager manejador = GameObject.Find("GameManager").GetComponent<GameManager>();
+            // GameManager manejador = new GameManager();
+            manejador.GameOver();
+        }
     }
 }
