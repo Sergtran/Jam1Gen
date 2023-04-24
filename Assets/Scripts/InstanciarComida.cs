@@ -17,6 +17,7 @@ public class InstanciarComida : MonoBehaviour
     void Start()
     {
         StartCoroutine(CrearComida());
+        InvokeRepeating("EliminarComida",4,3);
     }
 
     // Update is called once per frame
@@ -35,6 +36,11 @@ public class InstanciarComida : MonoBehaviour
             posicionComida = Random.Range(0, listaComida.Count);
             Instantiate(listaComida[posicionComida], InstanciarPosicionAleatoria(sueloSeleccionado), listaComida[posicionComida].transform.rotation);
         }
+    }
+
+    void EliminarComida(){
+        GameObject[] comidaEliminar = GameObject.FindGameObjectsWithTag("Food");
+        Destroy(comidaEliminar[0]);
     }
 
     /*Esta funcion busca el GameObject al que se le haya asociado el codigo y busca dentro de su area una
