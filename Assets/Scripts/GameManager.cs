@@ -7,23 +7,28 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    public List<GameObject> food;
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI gameOverText;
     public Button restartButton;
     public GameObject titleScreen;
+    public AudioSource musifaFondo;
+    public AudioSource sonidoMar;
     public int sumarTiempo = 10;
     public float timer = 5;
     public TextMeshProUGUI timerProText;
     public bool isGameActive;
     private int score;
+
+    public AudioSource sonidoGameOver;
     //private float spawnRate = 1.0f;
 
     // Start is called before the first frame update
     void Start()
     {
-        Time.timeScale = 0;
 
+        musifaFondo.Stop();
+        sonidoMar.Stop();
+        Time.timeScale = 0;
     }
 
     // Update is called once per frame
@@ -35,8 +40,9 @@ public class GameManager : MonoBehaviour
 
         Debug.Log(timer);
 
-        if(timer < 0)
+        if (timer < 0)
         {
+             
             GameOver();
         }
     }
@@ -54,35 +60,40 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
-        restartButton.gameObject.SetActive(true);
-        // Funciona como un booleano
-        gameOverText.gameObject.SetActive(true);
-        isGameActive = false;
-
-        Time.timeScale = 0;
+      
+        Invoke("EjecutarGameOver", .1f);
     }
 
     public void RestartGame()
     {
-        // Este podria recibir un string con le nombre de la escena o cargar la escena actual como lo hacemos
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-
         // con este llama por el numerp, y tambien podria con un string por el nombre
         SceneManager.LoadScene(0);
         //SceneManager.LoadScene(1);
         //SceneManager.LoadScene("Prototype 5");
     }
 
-    public void StartGame(/*int difficulty*/)
+    public void StartGame()
     {
+        musifaFondo.Play();
+        sonidoMar.Play();
         isGameActive = true;
         score = 0;
-        //spawnRate /= difficulty;
-
-        //StartCoroutine(SpawnTarget());
         UpdateScore(0);
         titleScreen.gameObject.SetActive(false);
-
         Time.timeScale = 1;
+
+    }
+
+    private void EjecutarGameOver()
+    {
+         sonidoGameOver.Play();
+        musifaFondo.Stop();
+        sonidoMar.Stop();
+        restartButton.gameObject.SetActive(true);
+        // Funciona como un booleano
+        gameOverText.gameObject.SetActive(true);
+
+        isGameActive = false;
+        Time.timeScale = 0;
     }
 }

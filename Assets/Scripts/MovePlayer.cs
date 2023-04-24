@@ -15,6 +15,8 @@ public class MovePlayer : MonoBehaviour
     private Rigidbody playerRb;
     public Animator playerAnimator;
 
+    public AudioSource sonidoSaltar;
+
 
     void Start()
     {
@@ -62,10 +64,10 @@ public class MovePlayer : MonoBehaviour
         // jump the player
         if (Input.GetKeyDown(KeyCode.Space) && isGround)
         {
-             playerRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            playerRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
             playerAnimator.SetBool("Jump", true);
-           
-            
+            sonidoSaltar.Play();
+
         }
 
         if (Input.GetKeyUp(KeyCode.Space))

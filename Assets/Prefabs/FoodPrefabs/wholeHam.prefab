@@ -11,12 +11,11 @@ GameObject:
   - component: {fileID: 8497709532631580826}
   - component: {fileID: 4774438312305479487}
   - component: {fileID: 7324754121597860853}
-  - component: {fileID: 8243650763344892148}
   - component: {fileID: 6929384014307215262}
   - component: {fileID: 699905248528400433}
   m_Layer: 0
   m_Name: wholeHam
-  m_TagString: Untagged
+  m_TagString: Food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29,8 +28,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9126049179758795296}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 69.4, y: -15.6, z: -30.3}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalPosition: {x: 69.4, y: -15.484, z: -30.3}
+  m_LocalScale: {x: 1.4714674, y: 1.4714674, z: 1.4714674}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3882257155698362630}
@@ -91,20 +90,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &8243650763344892148
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9126049179758795296}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1384244397c87e146bc75b4c622bd14a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  particleBorn: {fileID: 3976392615238208316}
-  particleDeath: {fileID: 573546973098144429}
 --- !u!54 &6929384014307215262
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -232,11 +217,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4483135165545610, guid: 1b85934f3ab9f88409e04178ece71a05, type: 3}
   m_PrefabInstance: {fileID: 374983420596769729}
   m_PrefabAsset: {fileID: 0}
---- !u!198 &573546973098144429 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 198598745608626540, guid: 1b85934f3ab9f88409e04178ece71a05, type: 3}
-  m_PrefabInstance: {fileID: 374983420596769729}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3886355364409999272
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -333,10 +313,5 @@ PrefabInstance:
 --- !u!4 &3882257155698362630 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4389029538297518, guid: b3d8264aa7d2d824a8a503e45291ddf4, type: 3}
-  m_PrefabInstance: {fileID: 3886355364409999272}
-  m_PrefabAsset: {fileID: 0}
---- !u!198 &3976392615238208316 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 198694502634222740, guid: b3d8264aa7d2d824a8a503e45291ddf4, type: 3}
   m_PrefabInstance: {fileID: 3886355364409999272}
   m_PrefabAsset: {fileID: 0}

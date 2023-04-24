@@ -6,6 +6,7 @@ TagManager:
   tags:
   - FxTemporaire
   - Ground
+  - Food
   layers:
   - Default
   - TransparentFX

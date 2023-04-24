@@ -11,12 +11,11 @@ GameObject:
   - component: {fileID: 9084335068083394474}
   - component: {fileID: 5313632969128351759}
   - component: {fileID: 7951428680895687877}
-  - component: {fileID: 8761950849896076642}
   - component: {fileID: 8934785626939928278}
   - component: {fileID: 2239708142887930279}
   m_Layer: 0
   m_Name: pineapple
-  m_TagString: Untagged
+  m_TagString: Food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -89,20 +88,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &8761950849896076642
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8456029681685908752}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1384244397c87e146bc75b4c622bd14a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  particleBorn: {fileID: 2890640610004355054}
-  particleDeath: {fileID: 4784978325786503408}
 --- !u!54 &8934785626939928278
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -225,11 +210,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b3d8264aa7d2d824a8a503e45291ddf4, type: 3}
---- !u!198 &2890640610004355054 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 198694502634222740, guid: b3d8264aa7d2d824a8a503e45291ddf4, type: 3}
-  m_PrefabInstance: {fileID: 3088477349687407482}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3086071877848581588 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4389029538297518, guid: b3d8264aa7d2d824a8a503e45291ddf4, type: 3}
@@ -331,10 +311,5 @@ PrefabInstance:
 --- !u!4 &4659490093434680598 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4483135165545610, guid: 1b85934f3ab9f88409e04178ece71a05, type: 3}
-  m_PrefabInstance: {fileID: 4658473462411921820}
-  m_PrefabAsset: {fileID: 0}
---- !u!198 &4784978325786503408 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 198598745608626540, guid: 1b85934f3ab9f88409e04178ece71a05, type: 3}
   m_PrefabInstance: {fileID: 4658473462411921820}
   m_PrefabAsset: {fileID: 0}
