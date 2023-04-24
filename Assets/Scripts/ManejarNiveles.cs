@@ -19,13 +19,13 @@ public class ManejarNiveles : MonoBehaviour
         puntaje = gameManager.score;
         switch (puntaje)
         {
-            case 100:
+            case 50:
                 listaNiveles[0].gameObject.SetActive(true);
                 break;
-            case 200:
+            case 100:
                 listaNiveles[1].gameObject.SetActive(true);
                 break;
-            case 300:
+            case 150:
                 listaNiveles[2].gameObject.SetActive(true);
                 break;
         }

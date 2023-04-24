@@ -36,7 +36,7 @@ public class GameManager : MonoBehaviour
     {
         timer -= Time.deltaTime;
 
-        timerProText.text = "" + timer.ToString("0");
+        timerProText.text = "" + timer.ToString("TIME : 0");
 
         Debug.Log(timer);
 
@@ -60,8 +60,9 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
-      
+       
         Invoke("EjecutarGameOver", .1f);
+          Invoke("EscenaInicio", 2f);
     }
 
     public void RestartGame()
@@ -89,11 +90,16 @@ public class GameManager : MonoBehaviour
          sonidoGameOver.Play();
         musifaFondo.Stop();
         sonidoMar.Stop();
-        restartButton.gameObject.SetActive(true);
+        //restartButton.gameObject.SetActive(true);
         // Funciona como un booleano
-        gameOverText.gameObject.SetActive(true);
-
+        //gameOverText.gameObject.SetActive(true);
         isGameActive = false;
-        Time.timeScale = 0;
+       // Time.timeScale = 0;
+        
+    }
+
+     public void EscenaInicio()
+    {
+        SceneManager.LoadScene("MenuInical");
     }
 }
