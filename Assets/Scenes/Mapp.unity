@@ -2890,6 +2890,22 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -1.7
       objectReference: {fileID: 0}
+    - target: {fileID: 7768796842444250342, guid: 43f844dc5d548a64796110f9612545a9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 868259286}
+    - target: {fileID: 7768796842444250342, guid: 43f844dc5d548a64796110f9612545a9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PausarJuego
+      objectReference: {fileID: 0}
+    - target: {fileID: 7768796842444250342, guid: 43f844dc5d548a64796110f9612545a9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7768796842444250342, guid: 43f844dc5d548a64796110f9612545a9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 43f844dc5d548a64796110f9612545a9, type: 3}
 --- !u!1001 &459271706
@@ -5243,6 +5259,7 @@ MonoBehaviour:
   timerProText: {fileID: 1912376047}
   isGameActive: 0
   score: 0
+  isPaused: 0
   sonidoGameOver: {fileID: 29449534}
 --- !u!4 &868259287
 Transform:

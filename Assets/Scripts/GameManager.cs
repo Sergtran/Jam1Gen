@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI timerProText;
     public bool isGameActive;
     public int score;
+    public bool isPaused = false;
 
     public AudioSource sonidoGameOver;
     //private float spawnRate = 1.0f;
@@ -102,4 +103,14 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene("MenuInical");
     }
+
+    public void PausarJuego(){
+        isPaused = !isPaused;
+        if(isPaused){
+            Time.timeScale = 0f;
+        }else{
+            Time.timeScale = 1f;
+        }
+    }
+
 }
