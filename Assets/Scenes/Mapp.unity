@@ -5202,6 +5202,7 @@ MonoBehaviour:
   timer: 60
   timerProText: {fileID: 1912376047}
   isGameActive: 0
+  score: 0
   sonidoGameOver: {fileID: 29449534}
 --- !u!4 &868259287
 Transform:
@@ -7317,7 +7318,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1895735573052686262, guid: b8d133b000cd3cc48a380307d9401764, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -4
       objectReference: {fileID: 0}
     - target: {fileID: 1895735573052686262, guid: b8d133b000cd3cc48a380307d9401764, type: 3}
       propertyPath: m_LocalPosition.z
