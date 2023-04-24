@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour
     public float timer = 5;
     public TextMeshProUGUI timerProText;
     public bool isGameActive;
-    private int score;
+    public int score;
 
     public AudioSource sonidoGameOver;
     //private float spawnRate = 1.0f;
