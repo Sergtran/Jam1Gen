@@ -2746,6 +2746,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6245358109667129368, guid: 43f844dc5d548a64796110f9612545a9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6245358110111718472, guid: 43f844dc5d548a64796110f9612545a9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -2841,6 +2845,10 @@ PrefabInstance:
     - target: {fileID: 6245358110339135835, guid: 43f844dc5d548a64796110f9612545a9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6245358110360932353, guid: 43f844dc5d548a64796110f9612545a9, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6245358110967874880, guid: 43f844dc5d548a64796110f9612545a9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
