@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571328, b: 0.3069217, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -8502,6 +8502,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sonidoMordisco: {fileID: 1545704000}
+--- !u!4 &1506254168 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2659536301817922321, guid: 25a3092a9994d6a49bc1da59eca949c1, type: 3}
+  m_PrefabInstance: {fileID: 1948390201}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1507077506 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 307571ec46442ed41b3304debe43bcbf, type: 3}
@@ -11781,7 +11786,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c03c97dac06fe1a459d45933aa70a5c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1506254161}
+  target: {fileID: 1506254168}
+  smoothSpeed: 0.125
   offset: {x: 0, y: 12.7, z: -13}
 --- !u!1001 &1777486627
 PrefabInstance:
@@ -12825,6 +12831,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2659536300431769314, guid: 25a3092a9994d6a49bc1da59eca949c1, type: 3}
+      propertyPath: m_Size.y
+      value: 1.5110624
+      objectReference: {fileID: 0}
+    - target: {fileID: 2659536300431769314, guid: 25a3092a9994d6a49bc1da59eca949c1, type: 3}
+      propertyPath: m_Size.z
+      value: 1.4790614
+      objectReference: {fileID: 0}
+    - target: {fileID: 2659536300431769314, guid: 25a3092a9994d6a49bc1da59eca949c1, type: 3}
+      propertyPath: m_Center.x
+      value: -1.4877625e-16
+      objectReference: {fileID: 0}
+    - target: {fileID: 2659536300431769314, guid: 25a3092a9994d6a49bc1da59eca949c1, type: 3}
+      propertyPath: m_Center.y
+      value: 0.8255311
+      objectReference: {fileID: 0}
+    - target: {fileID: 2659536300431769314, guid: 25a3092a9994d6a49bc1da59eca949c1, type: 3}
+      propertyPath: m_Center.z
+      value: 0.23953074
+      objectReference: {fileID: 0}
     - target: {fileID: 2659536301817922320, guid: 25a3092a9994d6a49bc1da59eca949c1, type: 3}
       propertyPath: m_Constraints
       value: 80
@@ -12878,9 +12904,21 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 2659536301817922327, guid: 25a3092a9994d6a49bc1da59eca949c1, type: 3}
+      propertyPath: jumpForce
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 2659536301817922327, guid: 25a3092a9994d6a49bc1da59eca949c1, type: 3}
       propertyPath: sonidoSaltar
       value: 
       objectReference: {fileID: 434824237}
+    - target: {fileID: 2659536301817922327, guid: 25a3092a9994d6a49bc1da59eca949c1, type: 3}
+      propertyPath: verticalInput
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2659536301817922327, guid: 25a3092a9994d6a49bc1da59eca949c1, type: 3}
+      propertyPath: horizontalInput
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 25a3092a9994d6a49bc1da59eca949c1, type: 3}
 --- !u!1001 &1959826388

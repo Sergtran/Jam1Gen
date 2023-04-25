@@ -8,7 +8,7 @@ public class MovePlayer : MonoBehaviour
     public float gravityModifier;
     public bool isGround = true;
 
-    private float speed = 5.0f;
+    private float speed = 10.0f;
     [SerializeField] private float horizontalInput;
     [SerializeField] private float verticalInput;
 
@@ -56,7 +56,7 @@ public class MovePlayer : MonoBehaviour
     void MoverJugador()
     {
         transform.Translate(Vector3.forward * Time.deltaTime * verticalInput);
-        transform.Rotate(new Vector3(0f, horizontalInput, 0f).normalized);
+        transform.Rotate(new Vector3(0f, horizontalInput * 2, 0f));
     }
 
     void Saltar()
